@@ -59,22 +59,22 @@ pipelineName.addEventListener('blur', () => {
         }
     }); 
 
-    cloudeStorageFile.addEventListener('blur', () => {
-        //   let regex=/^([^+-_][a-zA-z]{0-5})$/
-        let regex = /^[a-zA-Z0-9]{0,5}$/
-        let str = cloudeStorageFile.value;
-        console.log(regex, str);
-        if (regex.test(str)) {
-            console.log('valid');
-            document.getElementById('error-text3').style.display = 'none';
+    // cloudeStorageFile.addEventListener('blur', () => {
+    //     //   let regex=/^([^+-_][a-zA-z]{0-5})$/
+    //     let regex = /^[a-zA-Z0-9]{0,5}$/
+    //     let str = cloudeStorageFile.value;
+    //     console.log(regex, str);
+    //     if (regex.test(str)) {
+    //         console.log('valid');
+    //         document.getElementById('error-text3').style.display = 'none';
 
-        } else {
-            console.log('not valid');
-            document.getElementById('error-text3').style.display = 'block';
-            // errorText.innerHTML = 'Projectname name should be 0-5 character long and should not contain special character';
+    //     } else {
+    //         console.log('not valid');
+    //         document.getElementById('error-text3').style.display = 'block';
+    //         // errorText.innerHTML = 'Projectname name should be 0-5 character long and should not contain special character';
     
-        }
-    }); 
+    //     }
+    // }); 
 
     gscCredentials.addEventListener('blur', () => {
         //   let regex=/^([^+-_][a-zA-z]{0-5})$/
