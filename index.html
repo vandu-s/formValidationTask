@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./style.css">
+    <title>Form</title>
+</head>
+<body>
+    
+    <div  class="hero">
+      <div class="container">
+        <div class="header">
+          <h2>Fill Your Details</h2>
+        </div>
+        <form id="form" class="form">
+
+          <div class="form-control">
+            <label for="select-source">Select your source</label>
+            <select class="form-control" id="select-source" required> 
+              <option>Select your source</option>
+              <option>Google Cloud Storage</option>
+              <option>Amazon Cloud Storage</option>
+              <option>Azure Cloud Storage</option>
+            </select>  
+          </div>
+
+          <div class="form-control">
+             <label for="pipelinename">Provide a name for pipeline</label>
+            <input type="text" placeholder="cust_shop_energy_gateway001" id="pipelinename" /> 
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small id="error-text">Pipeline name should be 0-5 character long and should not contain special character</small>
+
+          </div>
+          <div class="form-control">
+            <label for="projectname">GCS project name</label>
+            <input type="text" placeholder="Project-Id" id="projectname" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small id="error-text1">Project name should be 0-5 character long and should not contain special character</small>
+          </div>
+          <div class="form-control">
+            <label for="bucket-name">GCS bucket name</label>
+            <input type="text" placeholder="Your-bucket" id="bucket-name"/>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small id="error-text2">GCS bucket name  should be 0-5 character long and should not contain special character</small>
+          </div>
+          <div class="form-control">
+            <label for="cloude-storage-file">Input Cloud Storage File(s)</label>
+            <input type="text" placeholder="GCS location of your files" id="cloude-storage-file"/>
+            <small>Example:gs://your-bucket/your-files/01.csv</small> br
+            <small id="error-text3">GCS bucket name  should be 0-5 character long and should not contain special character</small>
+          </div>
+          <div class="form-control">
+            <label for="GCS-credentials">GCS credentials</label>
+            <input type="text" placeholder="Your Credentials" id="GCS-credentials"/>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small id="error-text4">GCS credentials name  should be 0-5 character long and should not contain special character</small>
+          </div>
+
+          <div class="form-control">
+            <label for="runeveryminute">Run Every</label>
+            <input type="number" placeholder="In  minutes" id="runeveryminute"/>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small id="error-text5">Run Every should be in minitus </small>
+          </div>
+   <div class="button-wrapper">         
+     
+    <button type="submit" id="create">Create</button> <button id="cancel">Cancel</button>
+   </div>
+        </form>
+      </div>
+      
+      
+ <script src="./script.js"></script>   
+</body>
+</html>
