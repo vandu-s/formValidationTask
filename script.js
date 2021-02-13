@@ -11,6 +11,7 @@ form.addEventListener('submit', (e) => {
     e.prebentDefault();
     validate();
 });
+/*input validation*/
 pipelineName.addEventListener('blur', () => {
     let regex = /^[a-zA-Z0-9]{0,5}$/
     let str = pipelineName.value;
@@ -25,90 +26,65 @@ pipelineName.addEventListener('blur', () => {
 
     }
 });
-    projectName.addEventListener('blur', () => {
-        //   let regex=/^([^+-_][a-zA-z]{0-5})$/
-        let regex = /^[a-zA-Z0-9]{0,5}$/
-        let str = projectName.value;
-        console.log(regex, str);
-        if (regex.test(str)) {
-            console.log('valid');
-            document.getElementById('error-text1').style.display = 'none';
+projectName.addEventListener('blur', () => {
+    let regex = /^[a-zA-Z0-9]{0,5}$/
+    let str = projectName.value;
+    console.log(regex, str);
+    if (regex.test(str)) {
+        console.log('valid');
+        document.getElementById('error-text1').style.display = 'none';
 
-        } else {
-            console.log('not valid');
-            document.getElementById('error-text1').style.display = 'block';
-            // errorText.innerHTML = 'Projectname name should be 0-5 character long and should not contain special character';
-    
-        }
-    }); 
+    } else {
+        console.log('not valid');
+        document.getElementById('error-text1').style.display = 'block';
 
-    bucketName.addEventListener('blur', () => {
-        //   let regex=/^([^+-_][a-zA-z]{0-5})$/
-        let regex = /^[a-zA-Z0-9]{0,5}$/
-        let str = bucketName.value;
-        console.log(regex, str);
-        if (regex.test(str)) {
-            console.log('valid');
-            document.getElementById('error-text2').style.display = 'none';
+    }
+});
 
-        } else {
-            console.log('not valid');
-            document.getElementById('error-text2').style.display = 'block';
-            // errorText.innerHTML = 'Projectname name should be 0-5 character long and should not contain special character';
-    
-        }
-    }); 
+bucketName.addEventListener('blur', () => {
+    let regex = /^[a-zA-Z0-9]{0,5}$/
+    let str = bucketName.value;
+    console.log(regex, str);
+    if (regex.test(str)) {
+        console.log('valid');
+        document.getElementById('error-text2').style.display = 'none';
 
-    // cloudeStorageFile.addEventListener('blur', () => {
-    //     //   let regex=/^([^+-_][a-zA-z]{0-5})$/
-    //     let regex = /^[a-zA-Z0-9]{0,5}$/
-    //     let str = cloudeStorageFile.value;
-    //     console.log(regex, str);
-    //     if (regex.test(str)) {
-    //         console.log('valid');
-    //         document.getElementById('error-text3').style.display = 'none';
+    } else {
+        console.log('not valid');
+        document.getElementById('error-text2').style.display = 'block';
 
-    //     } else {
-    //         console.log('not valid');
-    //         document.getElementById('error-text3').style.display = 'block';
-    //         // errorText.innerHTML = 'Projectname name should be 0-5 character long and should not contain special character';
-    
-    //     }
-    // }); 
+    }
+});
 
-    gscCredentials.addEventListener('blur', () => {
-        //   let regex=/^([^+-_][a-zA-z]{0-5})$/
-        let regex = /^[a-zA-Z0-9]{0,5}$/
-        let str = gscCredentials.value;
-        console.log(regex, str);
-        if (regex.test(str)) {
-            console.log('valid');
-            document.getElementById('error-text4').style.display = 'none';
+gscCredentials.addEventListener('blur', () => {
+    let regex = /^[a-zA-Z0-9]{0,5}$/
+    let str = gscCredentials.value;
+    console.log(regex, str);
+    if (regex.test(str)) {
+        console.log('valid');
+        document.getElementById('error-text4').style.display = 'none';
 
-        } else {
-            console.log('not valid');
-            document.getElementById('error-text4').style.display = 'block';
-            // errorText.innerHTML = 'Projectname name should be 0-5 character long and should not contain special character';
-    
-        }
-    }); 
+    } else {
+        console.log('not valid');
+        document.getElementById('error-text4').style.display = 'block';
 
-    runeveryminute.addEventListener('blur', () => {
-        //   let regex=/^([^+-_][a-zA-z]{0-5})$/
-        let regex = /^[0-9]{0,4}$/
-        let str = runeveryminute.value;
-        console.log(regex, str);
-        if (regex.test(str)) {
-            console.log('valid');
-            document.getElementById('error-text5').style.display = 'none';
+    }
+});
 
-        } else {
-            console.log('not valid');
-            document.getElementById('error-text5').style.display = 'block';
-            // errorText.innerHTML = 'Projectname name should be 0-5 character long and should not contain special character';
-    
-        }
-    }); 
+runeveryminute.addEventListener('blur', () => {
+    let regex = /^[0-9]{0,4}$/
+    let str = runeveryminute.value;
+    console.log(regex, str);
+    if (regex.test(str)) {
+        console.log('valid');
+        document.getElementById('error-text5').style.display = 'none';
+
+    } else {
+        console.log('not valid');
+        document.getElementById('error-text5').style.display = 'block';
+
+    }
+});
 
 
 
